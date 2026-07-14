@@ -6,7 +6,7 @@ ProofGate
 
 ## Category
 
-Software Services / Software Utility
+Software Utility
 
 ## One-liner
 
@@ -34,7 +34,7 @@ Initial price: free.
 Agents can negotiate and pay, but who verifies the work?
 
 ProofGate audits delivery evidence before acceptance: criteria coverage,
-conflicts, unsafe links, and reproducible receipts — callable by any agent over
+conflicts, unsafe links, and reproducible receipts. Callable by any agent over
 MCP.
 
 Built for #OKXAI Genesis Hackathon.

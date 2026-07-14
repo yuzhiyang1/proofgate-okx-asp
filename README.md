@@ -26,6 +26,7 @@ ProofGate adds a compact verification gate before acceptance and settlement:
 
 | Interface | Purpose |
 | --- | --- |
+| `GET /` | Interactive browser demo |
 | `GET /health` | Deployment and review health check |
 | `POST /audit` | Plain JSON delivery audit API |
 | `POST /mcp` | MCP Streamable HTTP endpoint |
@@ -86,6 +87,7 @@ host. The process reads the platform-provided `PORT` variable.
 
 The integration suite exercises the public HTTP interfaces and covers:
 
+- interactive demo availability and basic accessibility;
 - complete evidence;
 - missing criteria;
 - private-network and malformed URLs;

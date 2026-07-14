@@ -1,6 +1,7 @@
 import { createServer } from 'node:http';
 
 import { auditDelivery, validateAuditInput } from './audit.js';
+import { demoPage } from './demo-page.js';
 import { handleMcpRequest } from './mcp.js';
 
 async function readJson(request) {
@@ -19,9 +20,21 @@ function sendJson(response, status, payload) {
   response.end(JSON.stringify(payload));
 }
 
+function sendHtml(response, status, html) {
+  response.writeHead(status, {
+    'content-type': 'text/html; charset=utf-8'
+  });
+  response.end(html);
+}
+
 export function createAppServer() {
   return createServer(async (request, response) => {
     try {
+      if (request.method === 'GET' && request.url === '/') {
+        sendHtml(response, 200, demoPage);
+        return;
+      }
+
       if (request.method === 'GET' && request.url === '/health') {
         sendJson(response, 200, {
           status: 'ok',

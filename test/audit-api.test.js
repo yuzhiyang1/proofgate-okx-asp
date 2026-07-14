@@ -19,6 +19,17 @@ after(async () => {
   });
 });
 
+test('首页提供可访问的真实交付审计演示', async () => {
+  const response = await fetch(`${baseUrl}/`);
+
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get('content-type'), /^text\/html/);
+  const page = await response.text();
+  assert.match(page, /<form id="audit-form"/);
+  assert.match(page, /aria-live="polite"/);
+  assert.doesNotMatch(page, /[—–]/);
+});
+
 test('完整且可验证的交付证据会返回通过结论和稳定凭证', async () => {
   const response = await fetch(`${baseUrl}/audit`, {
     method: 'POST',
