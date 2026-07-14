@@ -8,6 +8,9 @@ receipt that another agent can independently reproduce from the same input.
 
 Built as a free A2MCP service for the **OKX.AI Genesis Hackathon**.
 
+The recording script, ASP field draft, X copy, and final checklist are in
+[`docs/okx-submission-kit.md`](docs/okx-submission-kit.md).
+
 ## Why ProofGate
 
 Agent marketplaces already help agents discover work, negotiate, and settle
