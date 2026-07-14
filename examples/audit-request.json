@@ -1,0 +1,21 @@
+{
+  "task": "Ship and merge a login rate-limit fix",
+  "criteria": [
+    "Code is merged",
+    "Automated tests pass"
+  ],
+  "evidence": [
+    {
+      "criterion": "Code is merged",
+      "kind": "github_pr",
+      "url": "https://github.com/example/repo/pull/42",
+      "status": "verified"
+    },
+    {
+      "criterion": "Automated tests pass",
+      "kind": "test_run",
+      "url": "https://github.com/example/repo/actions/runs/100",
+      "status": "verified"
+    }
+  ]
+}

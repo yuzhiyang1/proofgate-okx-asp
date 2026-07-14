@@ -1,0 +1,14 @@
+{
+  "name": "proofgate-okx-asp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-first delivery audit service for OKX.AI agents.",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
